@@ -79,17 +79,17 @@ namespace ColorMaker.WPF
 
         private void btnPassColorCode_Click(object sender, RoutedEventArgs e)
         {
-            if (txtRood.Text == null || txtRood.Text == "")
+            if (string.IsNullOrWhiteSpace(txtRood.Text))
             {
                 MessageBox.Show("ROOD moet een invoer hebben", "ERROR");
                 txtRood.Text = nul;
             }
-            if (txtGroen.Text == null || txtGroen.Text == "")
+            if (string.IsNullOrWhiteSpace(txtGroen.Text))
             {
                 MessageBox.Show("GROEN moet een invoer hebben", "ERROR");
                 txtGroen.Text = nul;
             }
-            if (txtBlauw.Text == null || txtBlauw.Text == "")
+            if (string.IsNullOrWhiteSpace(txtBlauw.Text))
             {
                 MessageBox.Show("BLAUW moet een invoer hebben", "ERROR");
                 txtBlauw.Text = nul;
