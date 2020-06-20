@@ -1,0 +1,22 @@
+﻿<Window x:Class="ColorMaker.WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ColorMaker.WPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="350"
+                           MinHeight="500" MinWidth="350"
+                           MaxHeight="500" MaxWidth="350">
+    <StackPanel>
+        <Label x:Name="lblColorLabel" 
+               Margin="10" 
+               Style="{StaticResource ColorLabelRound}"
+        />
+        <DockPanel>
+            <TextBox x:Name="txtRood" Margin="10"/>
+            <TextBox x:Name="txtGroen" Margin="10"/>
+            <TextBox x:Name="txtBlauw" Margin="10"/>
+        </DockPanel>
+    </StackPanel>
+</Window>
