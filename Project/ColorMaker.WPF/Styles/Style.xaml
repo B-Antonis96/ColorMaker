@@ -10,7 +10,7 @@
     <!--Ronde Label (kleurscherm)-->
     <Style x:Key="ColorLabelRound" TargetType="{x:Type Label}">
         <Setter Property="Background" Value="Black"/>
-        <Setter Property="Height" Value="200"/>
+        <Setter Property="Height" Value="220"/>
         <Setter Property="BorderBrush" Value="Gray"/>
         <Setter Property="BorderThickness" Value="8"/>
         <Style.Resources>
@@ -36,7 +36,7 @@
         </Style.Resources>
     </Style>
 
-    <!--KleurLabels-->
+    <!--KleurLabels (actief)-->
     <Style x:Key="LabelKleur" TargetType="{x:Type Label}">
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
@@ -45,13 +45,19 @@
         <Setter Property="FontFamily" Value="Impact"/>
     </Style>
     
-    <!--Ronde knoppen-->
+    <!--Kleurlabels (niet actief)-->
+    <Style x:Key="LabelKleurGray" TargetType="{x:Type Label}" BasedOn="{StaticResource LabelKleur}">
+        <Setter Property="Foreground" Value="Gray"/>
+    </Style>
+    
+    <!--Ronde knop-->
     <Style x:Key="RoundButton" TargetType="{x:Type Button}">
         <Setter Property="Margin" Value="10"/>
         <Setter Property="Width" Value="150"/>
         <Setter Property="Height" Value="24"/>
         <Setter Property="FontFamily" Value="Impact"/>
         <Setter Property="FontSize" Value="16"/>
+        <Setter Property="Background" Value="YellowGreen"/>
         <Style.Resources>
             <Style TargetType="{x:Type Border}">
                 <Setter Property="CornerRadius" Value="8"/>
@@ -68,15 +74,23 @@
         <Setter Property="Foreground" Value="WhiteSmoke"/>
     </Style>
     
+    <!--ResetButton-->
+    <Style x:Key="ResetButton" TargetType="{x:Type Button}" BasedOn="{StaticResource KleineRoundButton}">
+        <Setter Property="Background" Value="Orange"/>
+        <Setter Property="Foreground" Value="Black"/>
+    </Style>
+    
     <!--Radiobutton-->
     <Style x:Key="Radiobutton" TargetType="{x:Type RadioButton}">
         <Setter Property="FontFamily" Value="Impact"/>
         <Setter Property="FontSize" Value="16"/>
+        <Setter Property="Margin" Value="20, 10, 0, 0"/>
     </Style>
     
     <!--Seperator-->
     <Style x:Key="Seperator" TargetType="{x:Type Separator}">
         <Setter Property="Height" Value="10"/>
-        <Setter Property="Margin" Value="0, 12, 0, 12"/>
+        <Setter Property="Margin" Value="0, 12, 0, 0"/>
     </Style>
+    
 </ResourceDictionary>
