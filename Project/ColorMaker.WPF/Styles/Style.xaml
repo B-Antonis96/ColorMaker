@@ -35,6 +35,11 @@
             </Style>
         </Style.Resources>
     </Style>
+    
+    <!--Ronde textBox niet actief-->
+    <Style x:Key="ReadOnlyTextbox" TargetType="{x:Type TextBox}" BasedOn="{StaticResource TextBox}">
+        <Setter Property="IsReadOnly" Value="True"/>
+    </Style>
 
     <!--KleurLabels (actief)-->
     <Style x:Key="LabelKleur" TargetType="{x:Type Label}">
@@ -45,10 +50,10 @@
         <Setter Property="FontFamily" Value="Impact"/>
     </Style>
     
-    <!--Kleurlabels (niet actief)-->
+    <!--Kleurlabels (niet actief)--><!--
     <Style x:Key="LabelKleurGray" TargetType="{x:Type Label}" BasedOn="{StaticResource LabelKleur}">
         <Setter Property="Foreground" Value="Gray"/>
-    </Style>
+    </Style>-->
     
     <!--Ronde knop-->
     <Style x:Key="RoundButton" TargetType="{x:Type Button}">
