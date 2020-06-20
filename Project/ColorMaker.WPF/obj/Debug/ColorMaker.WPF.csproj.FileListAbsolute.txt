@@ -34,7 +34,6 @@ F:\Programmeren\Eigen Programma's\KleurMaker\ColorMaker.WPF\obj\Debug\ColorMaker
 F:\Programmeren\Eigen Programma's\ColorMaker\Project\ColorMaker.WPF\bin\Debug\ColorMaker.WPF.exe.config
 F:\Programmeren\Eigen Programma's\ColorMaker\Project\ColorMaker.WPF\bin\Debug\ColorMaker.WPF.exe
 F:\Programmeren\Eigen Programma's\ColorMaker\Project\ColorMaker.WPF\bin\Debug\ColorMaker.WPF.pdb
-F:\Programmeren\Eigen Programma's\ColorMaker\Project\ColorMaker.WPF\obj\Debug\ColorMaker.WPF.csprojAssemblyReference.cache
 F:\Programmeren\Eigen Programma's\ColorMaker\Project\ColorMaker.WPF\obj\Debug\MainWindow.g.cs
 F:\Programmeren\Eigen Programma's\ColorMaker\Project\ColorMaker.WPF\obj\Debug\App.g.cs
 F:\Programmeren\Eigen Programma's\ColorMaker\Project\ColorMaker.WPF\obj\Debug\ColorMaker.WPF_MarkupCompile.cache
