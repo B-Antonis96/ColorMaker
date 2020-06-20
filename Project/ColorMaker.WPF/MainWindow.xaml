@@ -75,8 +75,7 @@
 
             </DockPanel>
             <DockPanel HorizontalAlignment="Center">
-                <Button x:Name="btnMakeRandomColor" Background="Orange" Content="MAAK RANDOM KLEUR" Style="{StaticResource RoundButton}" Click="btnMakeRandomColor_Click"/>
-                <Button x:Name="btnPassColorCodeRandom" Content="VERWERK RANDOM" Style="{StaticResource RoundButton}" Click="btnPassColorCodeRandom_Click"/>
+                <Button x:Name="btnMakeRandomColor" Content="MAAK RANDOM KLEUR" Style="{StaticResource RoundButton}" Click="btnMakeRandomColor_Click"/>
             </DockPanel>
         </StackPanel>
 

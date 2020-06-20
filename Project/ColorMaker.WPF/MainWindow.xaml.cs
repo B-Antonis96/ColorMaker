@@ -79,10 +79,10 @@ namespace ColorMaker.WPF
 
         private void btnPassColorCode_Click(object sender, RoutedEventArgs e)
         {
-            string kleurHex = HexMaker();
+            string kleurHex = HexMaker(txtRood.Text, txtGroen.Text, txtBlauw.Text);
             txtColorOutput.Text = kleurHex;
 
-            kleur = ByteSwitcher();
+            kleur = ByteSwitcher(txtRood.Text, txtGroen.Text, txtBlauw.Text);
             lblColorLabel.Background = new SolidColorBrush(kleur);
         }
 
@@ -105,13 +105,18 @@ namespace ColorMaker.WPF
         {
             Random willekeurig = new Random();
 
-            
+            int rood = willekeurig.Next(0, 255);
+            int groen = willekeurig.Next(0, 255);
+            int blauw = willekeurig.Next(0, 255);
 
+            txtRoodRandom.Text = rood.ToString();
+            txtGroenRandom.Text = groen.ToString();
+            txtBlauwRandom.Text = blauw.ToString();
 
-        }
+            txtColorOutput.Text = HexMaker(txtRoodRandom.Text, txtGroenRandom.Text, txtBlauwRandom.Text);
 
-        private void btnPassColorCodeRandom_Click(object sender, RoutedEventArgs e)
-        {
+            kleur = ByteSwitcher(txtRoodRandom.Text, txtGroenRandom.Text, txtBlauwRandom.Text);
+            lblColorLabel.Background = new SolidColorBrush(kleur);
 
         }
 
@@ -131,11 +136,11 @@ namespace ColorMaker.WPF
 
 
         //HEX berekening
-        private string HexMaker()
+        private string HexMaker(string textR, string textG, string textB)
         {
-            int rood = int.Parse(txtRood.Text);
-            int groen = int.Parse(txtGroen.Text);
-            int blauw = int.Parse(txtBlauw.Text);
+            int rood = int.Parse(textR);
+            int groen = int.Parse(textG);
+            int blauw = int.Parse(textB);
 
             string hex = $"#{rood.ToString("X2")}{groen.ToString("X2")}{blauw.ToString("X2")}";
 
@@ -143,11 +148,11 @@ namespace ColorMaker.WPF
         }
 
         //BYTE bewerking
-        private Color ByteSwitcher()
+        private Color ByteSwitcher(string textR, string textG, string textB)
         {
-            byte roodByte = byte.Parse(txtRood.Text);
-            byte groenByte = byte.Parse(txtGroen.Text);
-            byte blauwByte = byte.Parse(txtBlauw.Text);
+            byte roodByte = byte.Parse(textR);
+            byte groenByte = byte.Parse(textG);
+            byte blauwByte = byte.Parse(textB);
 
             Color kleur = Color.FromRgb(roodByte, groenByte, blauwByte);
 
@@ -160,6 +165,7 @@ namespace ColorMaker.WPF
             Color klr = Color.FromRgb(0, 0, 0);
             lblColorLabel.Background = new SolidColorBrush(klr);
         }
+
         //Schermen op nul (0) zetten
         private void SetToNul()
         {
@@ -195,7 +201,6 @@ namespace ColorMaker.WPF
             txtGroenRandom.Visibility = veld;
             txtRoodRandom.Visibility = veld;
             btnMakeRandomColor.Visibility = veld;
-            btnPassColorCodeRandom.Visibility = veld;
             lblBlauwRandom.Visibility = veld;
             lblGroenRandom.Visibility = veld;
             lblRoodRandom.Visibility = veld;
