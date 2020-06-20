@@ -79,11 +79,29 @@ namespace ColorMaker.WPF
 
         private void btnPassColorCode_Click(object sender, RoutedEventArgs e)
         {
-            string kleurHex = HexMaker(txtRood.Text, txtGroen.Text, txtBlauw.Text);
-            txtColorOutput.Text = kleurHex;
+            if (txtRood.Text == null || txtRood.Text == "")
+            {
+                MessageBox.Show("ROOD moet een invoer hebben", "ERROR");
+                txtRood.Text = nul;
+            }
+            if (txtGroen.Text == null || txtGroen.Text == "")
+            {
+                MessageBox.Show("GROEN moet een invoer hebben", "ERROR");
+                txtGroen.Text = nul;
+            }
+            if (txtBlauw.Text == null || txtBlauw.Text == "")
+            {
+                MessageBox.Show("BLAUW moet een invoer hebben", "ERROR");
+                txtBlauw.Text = nul;
+            }
+            else
+            {
+                string kleurHex = HexMaker(txtRood.Text, txtGroen.Text, txtBlauw.Text);
+                txtColorOutput.Text = kleurHex;
 
-            kleur = ByteSwitcher(txtRood.Text, txtGroen.Text, txtBlauw.Text);
-            lblColorLabel.Background = new SolidColorBrush(kleur);
+                kleur = ByteSwitcher(txtRood.Text, txtGroen.Text, txtBlauw.Text);
+                lblColorLabel.Background = new SolidColorBrush(kleur);
+            }
         }
 
 

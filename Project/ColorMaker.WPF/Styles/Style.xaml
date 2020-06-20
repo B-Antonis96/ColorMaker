@@ -84,6 +84,13 @@
         <Setter Property="Background" Value="Orange"/>
         <Setter Property="Foreground" Value="Black"/>
     </Style>
+
+    <!--PI knoppen-->
+    <Style x:Key="CircleButton" TargetType="{x:Type Button}" BasedOn="{StaticResource RoundButton}">
+        <Setter Property="Width" Value="35"/>
+        <Setter Property="Background" Value="Orange"/>
+        <Setter Property="Foreground" Value="Black"/>
+    </Style>
     
     <!--Radiobutton-->
     <Style x:Key="Radiobutton" TargetType="{x:Type RadioButton}">
@@ -96,6 +103,11 @@
     <Style x:Key="Seperator" TargetType="{x:Type Separator}">
         <Setter Property="Height" Value="10"/>
         <Setter Property="Margin" Value="0, 12, 0, 0"/>
+        <Style.Resources>
+            <Style TargetType="{x:Type Border}">
+                <Setter Property="CornerRadius" Value="10"/>
+            </Style>
+        </Style.Resources>
     </Style>
     
 </ResourceDictionary>
