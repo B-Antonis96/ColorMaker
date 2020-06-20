@@ -5,18 +5,93 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ColorMaker.WPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="350"
-                           MinHeight="500" MinWidth="350"
-                           MaxHeight="500" MaxWidth="350">
-    <StackPanel>
+        Title="MainWindow" Height="800" Width="550"
+                           MinHeight="800" MinWidth="550"
+                           MaxHeight="800" MaxWidth="550">
+    
+    <StackPanel Style="{StaticResource BackgroundStyle}">
+
+        <!--///////////////////
+        KLEURSCHERM
+        /////////////////// -->
         <Label x:Name="lblColorLabel" 
                Margin="10" 
                Style="{StaticResource ColorLabelRound}"
         />
-        <DockPanel>
-            <TextBox x:Name="txtRood" Margin="10"/>
-            <TextBox x:Name="txtGroen" Margin="10"/>
-            <TextBox x:Name="txtBlauw" Margin="10"/>
-        </DockPanel>
+
+        <Separator Style="{StaticResource Seperator}"/>
+
+
+        <!--///////////////////
+        ZELF KLEUR INGEVEN
+        /////////////////// -->
+        <StackPanel>
+            <RadioButton Margin="20, 10, 0, 0" Content="KLEUR INGEVEN" Style="{StaticResource Radiobutton}">
+
+            </RadioButton>
+
+            <DockPanel  HorizontalAlignment="Center">
+                <StackPanel Width="140">
+                    <Label Content="ROOD" Foreground="Red" Style="{StaticResource LabelKleur}"/>
+                    <TextBox x:Name="txtRood" Style="{StaticResource TextBox}"/>
+                    <Button x:Name="btnResetRodeButton" Content="RESET" Style="{StaticResource KleineRoundButton}"/>
+                </StackPanel>
+                <StackPanel Width="140">
+                    <Label Content="GROEN" Foreground="Green" Style="{StaticResource LabelKleur}"/>
+                    <TextBox x:Name="txtGroen" Style="{StaticResource TextBox}"/>
+                    <Button x:Name="btnResetGroeneButton" Content="RESET" Style="{StaticResource KleineRoundButton}"/>
+                </StackPanel>
+                <StackPanel Width="140">
+                    <Label Content="BLAUW" Foreground="Blue" Style="{StaticResource LabelKleur}"/>
+                    <TextBox x:Name="txtBlauw" Style="{StaticResource TextBox}"/>
+                    <Button x:Name="btnResetBlauweButton" Content="RESET" Style="{StaticResource KleineRoundButton}"/>
+                </StackPanel>
+
+            </DockPanel>
+            <Button x:Name="btnPassColorCode" Background="LightGreen" Content="VERWERK INVOER" Style="{StaticResource RoundButton}"/>
+        </StackPanel>
+
+        <Separator Style="{StaticResource Seperator}"/>
+
+
+
+        <!--///////////////////
+        RANDOM KLEUR KIEZEN
+        /////////////////// -->
+        <StackPanel>
+            <RadioButton Margin="20, 10, 0, 0" Content="WILLEKEURIGE KLEUR" Style="{StaticResource Radiobutton}">
+
+            </RadioButton>
+
+            <DockPanel  HorizontalAlignment="Center">
+                <StackPanel Width="140">
+                    <Label Content="ROOD" Foreground="Red" Style="{StaticResource LabelKleur}"/>
+                    <TextBox x:Name="txtRoodRandom" Style="{StaticResource TextBox}"/>
+                </StackPanel>
+                <StackPanel Width="140">
+                    <Label Content="GROEN" Foreground="Green" Style="{StaticResource LabelKleur}"/>
+                    <TextBox x:Name="txtGroenRandom" Style="{StaticResource TextBox}"/>
+                </StackPanel>
+                <StackPanel Width="140">
+                    <Label Content="BLAUW" Foreground="Blue" Style="{StaticResource LabelKleur}"/>
+                    <TextBox x:Name="txtBlauwRandom" Style="{StaticResource TextBox}"/>
+                </StackPanel>
+
+            </DockPanel>
+            <Button x:Name="btnPassColorCodeRandom" Background="LightGreen" Content="VERWERK RANDOM" Style="{StaticResource RoundButton}"/>
+        </StackPanel>
+
+
+        <Separator Style="{StaticResource Seperator}"/>
+        
+        <!--///////////////////
+        OUTPUT KLEURCODE
+        /////////////////// -->
+        <StackPanel>
+            <Label Content="OUTPUT KLEURCODE" Style="{StaticResource LabelKleur}"/>
+            <TextBox x:Name="txtColorOutput" Width="250" Style="{StaticResource TextBox}"/>
+            <Button x:Name="btnResetColorCode" Background="OrangeRed" Content="RESET CODE" Style="{StaticResource RoundButton}"/>
+        </StackPanel>
+
     </StackPanel>
 </Window>
