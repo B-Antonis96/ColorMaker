@@ -83,13 +83,15 @@
     <Style x:Key="ResetButton" TargetType="{x:Type Button}" BasedOn="{StaticResource KleineRoundButton}">
         <Setter Property="Background" Value="Orange"/>
         <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="Width" Value="50"/>
     </Style>
 
     <!--PI knoppen-->
     <Style x:Key="CircleButton" TargetType="{x:Type Button}" BasedOn="{StaticResource RoundButton}">
         <Setter Property="Width" Value="35"/>
-        <Setter Property="Background" Value="Orange"/>
+        <Setter Property="Background" Value="CornflowerBlue"/>
         <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="Margin" Value="2"/>
     </Style>
     
     <!--Radiobutton-->

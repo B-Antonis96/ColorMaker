@@ -1,0 +1,6 @@
+F:\Programmeren\Eigen Programma's\ColorMaker\Project\ColorMaker.MODELS\bin\Debug\ColorMaker.MODELS.dll
+F:\Programmeren\Eigen Programma's\ColorMaker\Project\ColorMaker.MODELS\bin\Debug\ColorMaker.MODELS.pdb
+F:\Programmeren\Eigen Programma's\ColorMaker\Project\ColorMaker.MODELS\obj\Debug\ColorMaker.MODELS.csprojAssemblyReference.cache
+F:\Programmeren\Eigen Programma's\ColorMaker\Project\ColorMaker.MODELS\obj\Debug\ColorMaker.MODELS.csproj.CoreCompileInputs.cache
+F:\Programmeren\Eigen Programma's\ColorMaker\Project\ColorMaker.MODELS\obj\Debug\ColorMaker.MODELS.dll
+F:\Programmeren\Eigen Programma's\ColorMaker\Project\ColorMaker.MODELS\obj\Debug\ColorMaker.MODELS.pdb

@@ -98,5 +98,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ColorMaker.MODELS\ColorMaker.MODELS.csproj">
+      <Project>{e929f6de-2212-4886-8e90-8362f3925b2f}</Project>
+      <Name>ColorMaker.MODELS</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

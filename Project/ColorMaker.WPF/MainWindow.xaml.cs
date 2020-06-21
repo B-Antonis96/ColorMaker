@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Drawing;
+using ColorMaker.MODELS;
 
 namespace ColorMaker.WPF
 {
@@ -26,6 +27,8 @@ namespace ColorMaker.WPF
         Visibility hidden = Visibility.Hidden;
 
         string nul = 0.ToString();
+
+        RGBProp rgb = new RGBProp();
 
         //Aanmaken KLEUR
         Color kleur = new Color();
@@ -79,30 +82,81 @@ namespace ColorMaker.WPF
 
         private void btnPassColorCode_Click(object sender, RoutedEventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtRood.Text))
+            rgb.Rood = int.Parse(txtRood.Text);
+            rgb.Groen = int.Parse(txtGroen.Text);
+            rgb.Blauw = int.Parse(txtBlauw.Text);
+            int rood = rgb.Rood;
+            int groen = rgb.Groen;
+            int blauw = rgb.Blauw;
+
+            if (rood > 255 ||
+                groen > 255 ||
+                blauw > 255)
             {
-                MessageBox.Show("ROOD moet een invoer hebben", "ERROR");
-                txtRood.Text = nul;
+                MessageBox.Show("Waarde mag niet boven 255 komen!");
+
+                if (rood > 255)
+                {
+                    txtRood.Text = "255";
+                }
+                if (groen > 255)
+                {
+                    txtGroen.Text = "255";
+                }
+                if (blauw > 255)
+                {
+                    txtBlauw.Text = "255";
+                }
             }
-            if (string.IsNullOrWhiteSpace(txtGroen.Text))
+            if (rood < 0 ||
+                groen < 0 ||
+                blauw < 0)
             {
-                MessageBox.Show("GROEN moet een invoer hebben", "ERROR");
-                txtGroen.Text = nul;
-            }
-            if (string.IsNullOrWhiteSpace(txtBlauw.Text))
-            {
-                MessageBox.Show("BLAUW moet een invoer hebben", "ERROR");
-                txtBlauw.Text = nul;
+                MessageBox.Show("Waarde mag niet onder 0 komen!");
+
+                if (rood < 0)
+                {
+                    txtRood.Text = nul;
+                }
+                if (groen < 0)
+                {
+                    txtGroen.Text = nul;
+                }
+                if (blauw < 0)
+                {
+                    txtBlauw.Text = nul;
+                }
             }
             else
             {
-                string kleurHex = HexMaker(txtRood.Text, txtGroen.Text, txtBlauw.Text);
-                txtColorOutput.Text = kleurHex;
+                if (string.IsNullOrWhiteSpace(txtRood.Text))
+                {
+                    MessageBox.Show("ROOD moet een invoer hebben", "ERROR");
+                    txtRood.Text = nul;
+                }
+                if (string.IsNullOrWhiteSpace(txtGroen.Text))
+                {
+                    MessageBox.Show("GROEN moet een invoer hebben", "ERROR");
+                    txtGroen.Text = nul;
+                }
+                if (string.IsNullOrWhiteSpace(txtBlauw.Text))
+                {
+                    MessageBox.Show("BLAUW moet een invoer hebben", "ERROR");
+                    txtBlauw.Text = nul;
+                }
+                else
+                {
+                    string kleurHex = HexMaker(txtRood.Text, txtGroen.Text, txtBlauw.Text);
+                    txtColorOutput.Text = kleurHex;
 
-                kleur = ByteSwitcher(txtRood.Text, txtGroen.Text, txtBlauw.Text);
-                lblColorLabel.Background = new SolidColorBrush(kleur);
+                    kleur = ByteSwitcher(txtRood.Text, txtGroen.Text, txtBlauw.Text);
+                    lblColorLabel.Background = new SolidColorBrush(kleur);
+                }
             }
+
         }
+
+        //PLUS MIN knoppen
 
 
 
@@ -135,7 +189,6 @@ namespace ColorMaker.WPF
 
             kleur = ByteSwitcher(txtRoodRandom.Text, txtGroenRandom.Text, txtBlauwRandom.Text);
             lblColorLabel.Background = new SolidColorBrush(kleur);
-
         }
 
 
