@@ -48,6 +48,8 @@ namespace ColorMaker.WPF
 
             //Onzichtbaar maken van Random objecten
             RandomVisibility(hidden);
+
+            SetToBlack();
         }
 
         private void btnResetRodeButton_Click(object sender, RoutedEventArgs e)
@@ -130,6 +132,8 @@ namespace ColorMaker.WPF
 
             //Onzichtbaar maken van INPUT objecten
             InputVisibility(hidden);
+
+            SetToBlack();
         }
 
         private void btnMakeRandomColor_Click(object sender, RoutedEventArgs e)

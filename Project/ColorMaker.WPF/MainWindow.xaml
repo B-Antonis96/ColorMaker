@@ -27,6 +27,7 @@
         ZELF KLEUR INGEVEN
         /////////////////// -->
         <StackPanel>
+            
             <RadioButton x:Name="rbColorInput" Content="KLEUR INGEVEN" Style="{StaticResource Radiobutton}" Checked="rbColorInput_Checked"/>
 
             <DockPanel  HorizontalAlignment="Center">
