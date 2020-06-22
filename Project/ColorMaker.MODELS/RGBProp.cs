@@ -24,5 +24,24 @@ namespace ColorMaker.MODELS
             Groen = 0;
             Blauw = 0;
         }
+
+        //METHODES
+        public int RoodProps(int rood)
+        {
+            if (Rood < 0)
+            {
+                Rood = 0;
+            }
+            if (Rood > 255)
+            {
+                Rood = 255;
+            }
+            else
+            {
+                rood = Rood;
+            }
+
+            return rood;
+        }
     }
 }
