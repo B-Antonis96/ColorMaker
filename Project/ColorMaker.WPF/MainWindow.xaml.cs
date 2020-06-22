@@ -1,18 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using System.Drawing;
 
 namespace ColorMaker.WPF
 {
@@ -94,7 +82,7 @@ namespace ColorMaker.WPF
         //PLUS MIN knoppen
         private void btnMinRodeButton_Click(object sender, RoutedEventArgs e)
         {
-            int rood =  int.Parse(txtRood.Text);
+            int rood = int.Parse(txtRood.Text);
             txtRood.Text = ColorSetter(ColorMin(rood)).ToString();
 
         }
@@ -156,9 +144,9 @@ namespace ColorMaker.WPF
             txtGroenRandom.Text = groen.ToString();
             txtBlauwRandom.Text = blauw.ToString();
 
-            txtColorOutput.Text = HexMaker(txtRoodRandom.Text, txtGroenRandom.Text, txtBlauwRandom.Text);
+            txtColorOutput.Text = HexMaker(rood.ToString(), groen.ToString(), blauw.ToString());
 
-            kleur = ByteSwitcher(txtRoodRandom.Text, txtGroenRandom.Text, txtBlauwRandom.Text);
+            kleur = ByteSwitcher(rood.ToString(), groen.ToString(), blauw.ToString());
             lblColorLabel.Background = new SolidColorBrush(kleur);
         }
 
@@ -182,12 +170,12 @@ namespace ColorMaker.WPF
             if (kleur < 0)
             {
                 kleur = 0;
-                MessageBox.Show("Waarde mag niet onder 0 komen!");
+                MessageBox.Show($"Waarde mag niet onder {kleur} komen!");
             }
             if (kleur > 255)
             {
                 kleur = 255;
-                MessageBox.Show("Waarde mag niet boven 255 komen!");
+                MessageBox.Show($"Waarde mag niet boven {kleur} komen!");
             }
 
             return kleur;

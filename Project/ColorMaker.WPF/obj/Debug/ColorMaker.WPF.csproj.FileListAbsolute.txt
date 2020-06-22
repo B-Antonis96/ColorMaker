@@ -47,3 +47,4 @@ F:\Programmeren\Eigen Programma's\ColorMaker\Project\ColorMaker.WPF\obj\Debug\Co
 F:\Programmeren\Eigen Programma's\ColorMaker\Project\ColorMaker.WPF\obj\Debug\ColorMaker.WPF.csproj.CoreCompileInputs.cache
 F:\Programmeren\Eigen Programma's\ColorMaker\Project\ColorMaker.WPF\obj\Debug\ColorMaker.WPF.exe
 F:\Programmeren\Eigen Programma's\ColorMaker\Project\ColorMaker.WPF\obj\Debug\ColorMaker.WPF.pdb
+F:\Programmeren\Eigen Programma's\ColorMaker\Project\ColorMaker.WPF\obj\Debug\ColorMaker.WPF.csprojAssemblyReference.cache
