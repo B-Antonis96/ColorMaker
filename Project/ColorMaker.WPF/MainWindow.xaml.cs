@@ -13,7 +13,6 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Drawing;
-using ColorMaker.MODELS;
 
 namespace ColorMaker.WPF
 {
@@ -27,8 +26,6 @@ namespace ColorMaker.WPF
         Visibility hidden = Visibility.Hidden;
 
         string nul = 0.ToString();
-
-        RGBProp rgb = new RGBProp();
 
         //Aanmaken KLEUR
         Color kleur = new Color();
@@ -82,81 +79,55 @@ namespace ColorMaker.WPF
 
         private void btnPassColorCode_Click(object sender, RoutedEventArgs e)
         {
-            rgb.Rood = int.Parse(txtRood.Text);
-            rgb.Groen = int.Parse(txtGroen.Text);
-            rgb.Blauw = int.Parse(txtBlauw.Text);
-            int rood = rgb.Rood;
-            int groen = rgb.Groen;
-            int blauw = rgb.Blauw;
+            txtRood.Text = ColorSetter(int.Parse(txtRood.Text)).ToString();
+            txtGroen.Text = ColorSetter(int.Parse(txtGroen.Text)).ToString();
+            txtBlauw.Text = ColorSetter(int.Parse(txtBlauw.Text)).ToString();
 
-            if (rood > 255 ||
-                groen > 255 ||
-                blauw > 255)
-            {
-                MessageBox.Show("Waarde mag niet boven 255 komen!");
+            string kleurHex = HexMaker(txtRood.Text, txtGroen.Text, txtBlauw.Text);
+            txtColorOutput.Text = kleurHex;
 
-                if (rood > 255)
-                {
-                    txtRood.Text = "255";
-                }
-                if (groen > 255)
-                {
-                    txtGroen.Text = "255";
-                }
-                if (blauw > 255)
-                {
-                    txtBlauw.Text = "255";
-                }
-            }
-            if (rood < 0 ||
-                groen < 0 ||
-                blauw < 0)
-            {
-                MessageBox.Show("Waarde mag niet onder 0 komen!");
+            kleur = ByteSwitcher(txtRood.Text, txtGroen.Text, txtBlauw.Text);
+            lblColorLabel.Background = new SolidColorBrush(kleur);
+        }
 
-                if (rood < 0)
-                {
-                    txtRood.Text = nul;
-                }
-                if (groen < 0)
-                {
-                    txtGroen.Text = nul;
-                }
-                if (blauw < 0)
-                {
-                    txtBlauw.Text = nul;
-                }
-            }
-            else
-            {
-                if (string.IsNullOrWhiteSpace(txtRood.Text))
-                {
-                    MessageBox.Show("ROOD moet een invoer hebben", "ERROR");
-                    txtRood.Text = nul;
-                }
-                if (string.IsNullOrWhiteSpace(txtGroen.Text))
-                {
-                    MessageBox.Show("GROEN moet een invoer hebben", "ERROR");
-                    txtGroen.Text = nul;
-                }
-                if (string.IsNullOrWhiteSpace(txtBlauw.Text))
-                {
-                    MessageBox.Show("BLAUW moet een invoer hebben", "ERROR");
-                    txtBlauw.Text = nul;
-                }
-                else
-                {
-                    string kleurHex = HexMaker(txtRood.Text, txtGroen.Text, txtBlauw.Text);
-                    txtColorOutput.Text = kleurHex;
 
-                    kleur = ByteSwitcher(txtRood.Text, txtGroen.Text, txtBlauw.Text);
-                    lblColorLabel.Background = new SolidColorBrush(kleur);
-                }
-            }
+        //PLUS MIN knoppen
+        private void btnMinRodeButton_Click(object sender, RoutedEventArgs e)
+        {
+            int rood =  int.Parse(txtRood.Text);
+            txtRood.Text = ColorSetter(ColorMin(rood)).ToString();
 
         }
 
-        //PLUS MIN knoppen
+        private void btnPlusRodeButton_Click(object sender, RoutedEventArgs e)
+        {
+            int rood = int.Parse(txtRood.Text);
+            txtRood.Text = ColorSetter(ColorPlus(rood)).ToString();
+        }
+
+        private void btnMinGroeneButton_Click(object sender, RoutedEventArgs e)
+        {
+            int groen = int.Parse(txtGroen.Text);
+            txtGroen.Text = ColorSetter(ColorMin(groen)).ToString();
+        }
+
+        private void btnPlusGroeneButton_Click(object sender, RoutedEventArgs e)
+        {
+            int groen = int.Parse(txtGroen.Text);
+            txtGroen.Text = ColorSetter(ColorPlus(groen)).ToString();
+        }
+
+        private void btnMinBlauweButton_Click(object sender, RoutedEventArgs e)
+        {
+            int blauw = int.Parse(txtBlauw.Text);
+            txtBlauw.Text = ColorSetter(ColorMin(blauw)).ToString();
+        }
+
+        private void btnPlusBlauweButton_Click(object sender, RoutedEventArgs e)
+        {
+            int blauw = int.Parse(txtBlauw.Text);
+            txtBlauw.Text = ColorSetter(ColorPlus(blauw)).ToString();
+        }
 
 
 
@@ -205,6 +176,36 @@ namespace ColorMaker.WPF
 
         //METHODES
 
+        //KLEUR setter
+        private int ColorSetter(int kleur)
+        {
+            if (kleur < 0)
+            {
+                kleur = 0;
+                MessageBox.Show("Waarde mag niet onder 0 komen!");
+            }
+            if (kleur > 255)
+            {
+                kleur = 255;
+                MessageBox.Show("Waarde mag niet boven 255 komen!");
+            }
+
+            return kleur;
+        }
+
+        //KLEUR changer plus
+        private int ColorPlus(int panel)
+        {
+            panel += 1;
+            return panel;
+        }
+
+        //KLEUR changer min
+        private int ColorMin(int panel)
+        {
+            panel -= 1;
+            return panel;
+        }
 
         //HEX berekening
         private string HexMaker(string textR, string textG, string textB)
@@ -261,6 +262,12 @@ namespace ColorMaker.WPF
             lblBlauwInput.Visibility = veld;
             lblGroenInput.Visibility = veld;
             lblRoodInput.Visibility = veld;
+            btnMinBlauweButton.Visibility = veld;
+            btnMinGroeneButton.Visibility = veld;
+            btnMinRodeButton.Visibility = veld;
+            btnPlusBlauweButton.Visibility = veld;
+            btnPlusGroeneButton.Visibility = veld;
+            btnPlusRodeButton.Visibility = veld;
 
             SetToNul();
         }
@@ -278,7 +285,5 @@ namespace ColorMaker.WPF
 
             SetToNul();
         }
-
-
     }
 }
