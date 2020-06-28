@@ -30,8 +30,6 @@ namespace ColorMaker.WPF
             SetToNul();
 
             rbColorInput.IsChecked = true;
-
-            string nul = 0.ToString();
         }
 
 
