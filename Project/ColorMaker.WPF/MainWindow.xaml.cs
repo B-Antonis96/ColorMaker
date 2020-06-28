@@ -67,9 +67,24 @@ namespace ColorMaker.WPF
 
         private void btnPassColorCode_Click(object sender, RoutedEventArgs e)
         {
-            txtRood.Text = ColorSetter(int.Parse(txtRood.Text)).ToString();
-            txtGroen.Text = ColorSetter(int.Parse(txtGroen.Text)).ToString();
-            txtBlauw.Text = ColorSetter(int.Parse(txtBlauw.Text)).ToString();
+            if (string.IsNullOrWhiteSpace(txtRood.Text))
+            {
+                txtRood.Text = nul;
+            }
+            if (string.IsNullOrWhiteSpace(txtGroen.Text))
+            {
+                txtGroen.Text = nul;
+            }
+            if (string.IsNullOrWhiteSpace(txtBlauw.Text))
+            {
+                txtBlauw.Text = nul;
+            }
+            else
+            {
+                txtRood.Text = ColorSetter(int.Parse(txtRood.Text)).ToString();
+                txtGroen.Text = ColorSetter(int.Parse(txtGroen.Text)).ToString();
+                txtBlauw.Text = ColorSetter(int.Parse(txtBlauw.Text)).ToString();
+            }
 
             string kleurHex = HexMaker(txtRood.Text, txtGroen.Text, txtBlauw.Text);
             txtColorOutput.Text = kleurHex;
