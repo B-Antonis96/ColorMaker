@@ -31,6 +31,7 @@
             <RadioButton x:Name="rbColorInput" Content="KLEUR INGEVEN" Style="{StaticResource Radiobutton}" Checked="rbColorInput_Checked"/>
 
             <DockPanel  HorizontalAlignment="Center">
+                
                 <StackPanel Width="170">
                     <Label x:Name="lblRoodInput" Content="ROOD" Foreground="Red" Style="{StaticResource LabelKleur}"/>
                     <TextBox x:Name="txtRood" Style="{StaticResource TextBox}"/>
@@ -40,6 +41,7 @@
                         <Button x:Name="btnResetRodeButton" Content="RESET" Style="{StaticResource ResetButton}" Click="btnResetRodeButton_Click"/>
                     </DockPanel>
                 </StackPanel>
+                
                 <StackPanel Width="170">
                     <Label x:Name="lblGroenInput" Content="GROEN" Foreground="Green" Style="{StaticResource LabelKleur}"/>
                     <TextBox x:Name="txtGroen" Style="{StaticResource TextBox}"/>
@@ -49,6 +51,7 @@
                         <Button x:Name="btnResetGroeneButton" Content="RESET" Style="{StaticResource ResetButton}" Click="btnResetGroeneButton_Click"/>
                     </DockPanel>                
                 </StackPanel>
+                
                 <StackPanel Width="170">
                     <Label x:Name="lblBlauwInput" Content="BLAUW" Foreground="Blue" Style="{StaticResource LabelKleur}"/>
                     <TextBox x:Name="txtBlauw" Style="{StaticResource TextBox}"/>
@@ -60,7 +63,9 @@
                 </StackPanel>
 
             </DockPanel>
+            
             <Button x:Name="btnPassColorCode" Content="VERWERK INVOER" Style="{StaticResource RoundButton}" Click="btnPassColorCode_Click"/>
+       
         </StackPanel>
 
         <Separator Style="{StaticResource Seperator}"/>
@@ -70,6 +75,7 @@
         RANDOM KLEUR KIEZEN
         /////////////////// -->
         <StackPanel>
+            
             <RadioButton x:Name="rbColorRandom" Content="WILLEKEURIGE KLEUR" Style="{StaticResource Radiobutton}" Checked="rbColorRandom_Checked"/>
 
             <DockPanel  HorizontalAlignment="Center">
@@ -87,9 +93,11 @@
                 </StackPanel>
 
             </DockPanel>
+            
             <DockPanel HorizontalAlignment="Center">
                 <Button x:Name="btnMakeRandomColor" Content="MAAK RANDOM KLEUR" Style="{StaticResource RoundButton}" Click="btnMakeRandomColor_Click"/>
             </DockPanel>
+            
         </StackPanel>
 
 
