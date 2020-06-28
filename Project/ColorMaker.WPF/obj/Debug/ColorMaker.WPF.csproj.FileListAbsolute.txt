@@ -48,3 +48,20 @@ F:\Programmeren\Eigen Programma's\ColorMaker\Project\ColorMaker.WPF\obj\Debug\Co
 F:\Programmeren\Eigen Programma's\ColorMaker\Project\ColorMaker.WPF\obj\Debug\ColorMaker.WPF.csproj.CoreCompileInputs.cache
 F:\Programmeren\Eigen Programma's\ColorMaker\Project\ColorMaker.WPF\obj\Debug\ColorMaker.WPF.exe
 F:\Programmeren\Eigen Programma's\ColorMaker\Project\ColorMaker.WPF\obj\Debug\ColorMaker.WPF.pdb
+C:\Users\bryan\Desktop\GIT\ColorMaker\Project\ColorMaker.WPF\bin\Debug\ColorMaker.WPF.exe.config
+C:\Users\bryan\Desktop\GIT\ColorMaker\Project\ColorMaker.WPF\bin\Debug\ColorMaker.WPF.exe
+C:\Users\bryan\Desktop\GIT\ColorMaker\Project\ColorMaker.WPF\bin\Debug\ColorMaker.WPF.pdb
+C:\Users\bryan\Desktop\GIT\ColorMaker\Project\ColorMaker.WPF\obj\Debug\ColorMaker.WPF.csprojAssemblyReference.cache
+C:\Users\bryan\Desktop\GIT\ColorMaker\Project\ColorMaker.WPF\obj\Debug\MainWindow.g.cs
+C:\Users\bryan\Desktop\GIT\ColorMaker\Project\ColorMaker.WPF\obj\Debug\App.g.cs
+C:\Users\bryan\Desktop\GIT\ColorMaker\Project\ColorMaker.WPF\obj\Debug\ColorMaker.WPF_MarkupCompile.cache
+C:\Users\bryan\Desktop\GIT\ColorMaker\Project\ColorMaker.WPF\obj\Debug\ColorMaker.WPF_MarkupCompile.lref
+C:\Users\bryan\Desktop\GIT\ColorMaker\Project\ColorMaker.WPF\obj\Debug\App.baml
+C:\Users\bryan\Desktop\GIT\ColorMaker\Project\ColorMaker.WPF\obj\Debug\MainWindow.baml
+C:\Users\bryan\Desktop\GIT\ColorMaker\Project\ColorMaker.WPF\obj\Debug\Styles\Style.baml
+C:\Users\bryan\Desktop\GIT\ColorMaker\Project\ColorMaker.WPF\obj\Debug\ColorMaker.WPF.g.resources
+C:\Users\bryan\Desktop\GIT\ColorMaker\Project\ColorMaker.WPF\obj\Debug\ColorMaker.WPF.Properties.Resources.resources
+C:\Users\bryan\Desktop\GIT\ColorMaker\Project\ColorMaker.WPF\obj\Debug\ColorMaker.WPF.csproj.GenerateResource.cache
+C:\Users\bryan\Desktop\GIT\ColorMaker\Project\ColorMaker.WPF\obj\Debug\ColorMaker.WPF.csproj.CoreCompileInputs.cache
+C:\Users\bryan\Desktop\GIT\ColorMaker\Project\ColorMaker.WPF\obj\Debug\ColorMaker.WPF.exe
+C:\Users\bryan\Desktop\GIT\ColorMaker\Project\ColorMaker.WPF\obj\Debug\ColorMaker.WPF.pdb
