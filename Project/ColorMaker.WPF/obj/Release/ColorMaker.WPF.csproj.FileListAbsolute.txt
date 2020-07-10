@@ -1,0 +1,16 @@
+F:\Programmeren\Eigen Programma's\ColorMaker\Project\ColorMaker.WPF\bin\Release\ColorMaker.WPF.exe.config
+F:\Programmeren\Eigen Programma's\ColorMaker\Project\ColorMaker.WPF\bin\Release\ColorMaker.WPF.exe
+F:\Programmeren\Eigen Programma's\ColorMaker\Project\ColorMaker.WPF\bin\Release\ColorMaker.WPF.pdb
+F:\Programmeren\Eigen Programma's\ColorMaker\Project\ColorMaker.WPF\obj\Release\MainWindow.g.cs
+F:\Programmeren\Eigen Programma's\ColorMaker\Project\ColorMaker.WPF\obj\Release\App.g.cs
+F:\Programmeren\Eigen Programma's\ColorMaker\Project\ColorMaker.WPF\obj\Release\ColorMaker.WPF_MarkupCompile.cache
+F:\Programmeren\Eigen Programma's\ColorMaker\Project\ColorMaker.WPF\obj\Release\ColorMaker.WPF_MarkupCompile.lref
+F:\Programmeren\Eigen Programma's\ColorMaker\Project\ColorMaker.WPF\obj\Release\App.baml
+F:\Programmeren\Eigen Programma's\ColorMaker\Project\ColorMaker.WPF\obj\Release\MainWindow.baml
+F:\Programmeren\Eigen Programma's\ColorMaker\Project\ColorMaker.WPF\obj\Release\Styles\Style.baml
+F:\Programmeren\Eigen Programma's\ColorMaker\Project\ColorMaker.WPF\obj\Release\ColorMaker.WPF.g.resources
+F:\Programmeren\Eigen Programma's\ColorMaker\Project\ColorMaker.WPF\obj\Release\ColorMaker.WPF.Properties.Resources.resources
+F:\Programmeren\Eigen Programma's\ColorMaker\Project\ColorMaker.WPF\obj\Release\ColorMaker.WPF.csproj.GenerateResource.cache
+F:\Programmeren\Eigen Programma's\ColorMaker\Project\ColorMaker.WPF\obj\Release\ColorMaker.WPF.csproj.CoreCompileInputs.cache
+F:\Programmeren\Eigen Programma's\ColorMaker\Project\ColorMaker.WPF\obj\Release\ColorMaker.WPF.exe
+F:\Programmeren\Eigen Programma's\ColorMaker\Project\ColorMaker.WPF\obj\Release\ColorMaker.WPF.pdb

@@ -29,6 +29,8 @@ namespace ColorMaker.WPF
             SetToBlack();
             SetToNul();
 
+            txtColorOutput.Text = "#000000";
+
             rbColorInput.IsChecked = true;
         }
 
