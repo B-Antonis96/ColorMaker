@@ -36,18 +36,19 @@
                     <Label x:Name="lblRoodInput" Content="ROOD" Foreground="Red" Style="{StaticResource LabelKleur}"/>
                     <TextBox x:Name="txtRood" Style="{StaticResource TextBox}"/>
                     <DockPanel HorizontalAlignment="Center">
-                        <Button x:Name="btnMinRodeButton" Content="-" Style="{StaticResource  CircleButton}" Click="btnMinRodeButton_Click"/>
-                        <Button x:Name="btnPlusRodeButton" Content="+" Style="{StaticResource  CircleButton}" Click="btnPlusRodeButton_Click"/>
+                        <ToggleButton x:Name="btnMinRodeButton" Content="-"  Style="{StaticResource  CircleButton}" Click="btnMinRodeButton_Click"/>
+                        <ToggleButton x:Name="btnPlusRodeButton" Content="+" Style="{StaticResource  CircleButton}" Click="btnPlusRodeButton_Click"/>
                         <Button x:Name="btnResetRodeButton" Content="RESET" Style="{StaticResource ResetButton}" Click="btnResetRodeButton_Click"/>
                     </DockPanel>
+                    <Slider x:Name="sldRood" />
                 </StackPanel>
                 
                 <StackPanel Width="170">
                     <Label x:Name="lblGroenInput" Content="GROEN" Foreground="Green" Style="{StaticResource LabelKleur}"/>
                     <TextBox x:Name="txtGroen" Style="{StaticResource TextBox}"/>
                     <DockPanel HorizontalAlignment="Center">
-                        <Button x:Name="btnMinGroeneButton" Content="-" Style="{StaticResource  CircleButton}" Click="btnMinGroeneButton_Click"/>
-                        <Button x:Name="btnPlusGroeneButton" Content="+" Style="{StaticResource  CircleButton}" Click="btnPlusGroeneButton_Click"/>
+                        <ToggleButton x:Name="btnMinGroeneButton" Content="-" Style="{StaticResource  CircleButton}" Click="btnMinGroeneButton_Click"/>
+                        <ToggleButton x:Name="btnPlusGroeneButton" Content="+" Style="{StaticResource  CircleButton}" Click="btnPlusGroeneButton_Click"/>
                         <Button x:Name="btnResetGroeneButton" Content="RESET" Style="{StaticResource ResetButton}" Click="btnResetGroeneButton_Click"/>
                     </DockPanel>                
                 </StackPanel>
@@ -56,8 +57,8 @@
                     <Label x:Name="lblBlauwInput" Content="BLAUW" Foreground="Blue" Style="{StaticResource LabelKleur}"/>
                     <TextBox x:Name="txtBlauw" Style="{StaticResource TextBox}"/>
                     <DockPanel HorizontalAlignment="Center">
-                        <Button x:Name="btnMinBlauweButton" Content="-" Style="{StaticResource  CircleButton}" Click="btnMinBlauweButton_Click"/>
-                        <Button x:Name="btnPlusBlauweButton" Content="+" Style="{StaticResource  CircleButton}" Click="btnPlusBlauweButton_Click"/>
+                        <ToggleButton x:Name="btnMinBlauweButton" Content="-" Style="{StaticResource  CircleButton}" Click="btnMinBlauweButton_Click"/>
+                        <ToggleButton x:Name="btnPlusBlauweButton" Content="+" Style="{StaticResource  CircleButton}" Click="btnPlusBlauweButton_Click"/>
                         <Button x:Name="btnResetBlauweButton" Content="RESET" Style="{StaticResource ResetButton}" Click="btnResetBlauweButton_Click"/>
                     </DockPanel>                
                 </StackPanel>

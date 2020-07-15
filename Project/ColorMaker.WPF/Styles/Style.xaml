@@ -50,10 +50,10 @@
         <Setter Property="FontFamily" Value="Impact"/>
     </Style>
     
-    <!--Kleurlabels (niet actief)--><!--
+    <!--Kleurlabels (niet actief)-->
     <Style x:Key="LabelKleurGray" TargetType="{x:Type Label}" BasedOn="{StaticResource LabelKleur}">
         <Setter Property="Foreground" Value="Gray"/>
-    </Style>-->
+    </Style>
     
     <!--Ronde knop-->
     <Style x:Key="RoundButton" TargetType="{x:Type Button}">
@@ -87,11 +87,18 @@
     </Style>
 
     <!--PI knoppen-->
-    <Style x:Key="CircleButton" TargetType="{x:Type Button}" BasedOn="{StaticResource RoundButton}">
+    <Style x:Key="CircleButton" TargetType="{x:Type ToggleButton}">
         <Setter Property="Width" Value="35"/>
+        <Setter Property="Height" Value="20"/>
+        <Setter Property="FontSize" Value="14"/>
         <Setter Property="Background" Value="CornflowerBlue"/>
         <Setter Property="Foreground" Value="Black"/>
         <Setter Property="Margin" Value="2"/>
+        <Style.Resources>
+            <Style TargetType="{x:Type Border}">
+                <Setter Property="CornerRadius" Value="8"/>
+            </Style>
+        </Style.Resources>
     </Style>
     
     <!--Radiobutton-->
